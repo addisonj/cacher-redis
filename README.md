@@ -2,10 +2,10 @@
 This is a pluggable backend for Cacher (https://github.com/addisonj/node-cacher)
 
 ## What is it?
-A small adapter to use node-redis
+A small adapter that uses redis as a backend
 
 ## Options
-CacherRedis takes the same parameters as node-redis (https://github.com/mranney/node_redis)
+CacherRedis takes the same parameters as node-redis.createClient (https://github.com/mranney/node_redis)
 ```JavaScript
 var CacherRedis = require('cacher-redis')
 var cacheBackend = new CacherRedis(host, port, opts)
@@ -18,4 +18,6 @@ var CacherRedis = require('cacher-redis')
 var Cacher = requrie('cacher')
 var cacher = new Cacher(new CacherRedis(redisClient))
 ```
+
+Keys are also namespaced, ``opts.namespace`` defines the namespace, the deafult namespace is "cacher"
 
