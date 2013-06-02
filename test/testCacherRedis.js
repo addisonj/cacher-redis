@@ -45,5 +45,17 @@ describe("RedisClient", function() {
     })
   })
 
+  it("should be able to support non-json cache ojbects", function(done) {
+    cache.set("text", "boop", 1000, function(err) {
+      assert.ifError(err)
+      cache.get("text", function(err, val) {
+        assert.ifError(err)
+        assert.equal(val, "boop")
+        done()
+      })
+
+    })
+  })
+
 
 })
