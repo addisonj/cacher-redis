@@ -1,0 +1,26 @@
+{
+  "name": "cacher-redis",
+  "version": "0.0.1",
+  "description": "A pluggable backend for Cacher that uses redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/addisonj/cacher-redis.git"
+  },
+  "keywords": [
+    "cacher",
+    "redis",
+    "http-caching"
+  ],
+  "author": "addisonj",
+  "license": "BSD",
+  "dependencies": {
+    "redback": "~0.3.5"
+  },
+  "devDependencies": {
+    "mocha": "~1.10.0"
+  }
+}
