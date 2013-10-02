@@ -2,13 +2,13 @@
 var redback = require("redback")
 
 
-function CacherRedis(host, port, opts) {
-  if (host instanceof redback.Client) {
-    this.client = redback.use(host)
+function CacherRedis(port, host, opts) {
+  if (port instanceof redback.Client) {
+    this.client = redback.use(port)
   }
   opts = opts || {}
 
-  this.client = this.client || new redback.createClient(host, port, opts)
+  this.client = this.client || new redback.createClient(port, host, opts)
 
   opts.namespace = opts.namespace || "cacher"
   this.cache = this.client.createCache(opts.namespace)

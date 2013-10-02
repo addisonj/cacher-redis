@@ -8,7 +8,7 @@ A small adapter that uses redis as a backend
 CacherRedis takes the same parameters as node-redis.createClient (https://github.com/mranney/node_redis)
 ```JavaScript
 var CacherRedis = require('cacher-redis')
-var cacheBackend = new CacherRedis(host, port, opts)
+var cacheBackend = new CacherRedis(port, host, opts)
 ```
 
 Additionally, it can take an existing redis connection and resuse it:
